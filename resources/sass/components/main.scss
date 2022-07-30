@@ -1,0 +1,18 @@
+
+
+
+.nav-rightside {
+    width: 100%;
+    justify-content: end;
+}
+
+.count-wrapper {
+    justify-content: end;
+    padding-top: 20px;
+}
+
+.main-app-container {
+
+    @include componentPadding;
+
+}

@@ -1,0 +1,16 @@
+@import 'bootstrap';
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css");
+
+// Global
+@import './global/spacing-utils.scss';
+@import './global/utilities.scss';
+
+
+// Components
+// @import './components/cards.scss';
+@import './components/main.scss';
+@import './components/login.scss';
+@import './components/register.scss';
+@import './components/cards.scss';
+@import './components/show.scss';
+@import './components/createPage.scss';
