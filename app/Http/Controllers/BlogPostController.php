@@ -35,7 +35,7 @@ class BlogPostController extends Controller
     {
         $tags = DB::table('tags')->get()->toArray(); // get the tags table info from the database with the get() method and save it as $tags variable
         
-        $tagColors = array('primary','success','danger','dark');
+        $tagColors = array('primary','success','danger','dark', 'warning','info' );
 
         $newColors = array();
 
@@ -46,7 +46,7 @@ class BlogPostController extends Controller
             
         }
         
-
+        
         return view('blog.create')->with('tags', $tags)->with('newColors', $newColors); //fetches the create view from the blog folder // also inserts the $tags variable to that view using the with() method
 
 
@@ -178,10 +178,24 @@ class BlogPostController extends Controller
 
 
 
+        $tags = DB::table('tags')->get()->toArray(); // get the tags table info from the database with the get() method and save it as $tags variable
+        
+        $tagColors = array('primary','success','danger','dark', 'warning','info' );
+
+        $newColors = array();
+
+        foreach($allTags as $tag) {
+            
+            $chsnClr = $tagColors[array_rand($tagColors)];
+            array_push($newColors, $chsnClr);
+            
+        }
+
         return view('blog.edit', [
             'post' => $blogPost,
             'allTags' => $allTags,
-            'postTags' => $postTags
+            'postTags' => $postTags,
+            'newColors'=> $newColors,
             ]); //returns the edit view with the post ** also passed the user selected tags as $tags and All current tags as $allTags
     }
 

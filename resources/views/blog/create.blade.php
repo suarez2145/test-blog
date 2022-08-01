@@ -18,24 +18,23 @@
                     <h1 class="header-txt">Create a New Post</h1>
                 </div>
                 
-                <div class="pl-4 pr-4">
+                <div class="overflow-hidden">
                     <div class='page-subtitle-cont'>
                         <p class="subtitle-txt">Fill and submit this form to create a post</p>
                     </div>
                     <form action="" method="POST">
                         @csrf
                         
-                            <div class='tags-container btn-group' data-toggle="buttons"> 
+                            <div class='tags-container row g-0' data-toggle="buttons"> 
                                 @foreach($tags as $k=> $t )
 
-                                    <label x-data="{ checked{{$t->id}}: false, }" class="btn btn-{{$newColors[$k]}} active m-2 border-0">
+                                    <label x-data="{ checked{{$t->id}}: false, }" class="btn btn-{{$newColors[$k]}} active m-2 border-0 col-3">
                                         <input class='hide' x-on:click="checked{{$t->id}} = ! checked{{$t->id}}" type="checkbox" autocomplete="off"  name='tags[]' value="{{ $t->id }}">
                                         <span class="bi bi-check2" :class="checked{{$t->id}} ? '' : 'check-hide'"></span>
                                         <span>{{$t->name}}</span>
                                     </label>
                                 @endforeach
                             </div>
-                       
                         <div class='' id='tagDiv' x-data="{ 
                             newTags: [],
                             addTag() { 
@@ -58,7 +57,7 @@
                                 <h6>Add Tag</h6>
                                 <div class='txt-button d-flex flex-row' id='txt-button'>
                                     <!-- <input type="text" id="new-tag" style="text-transform:uppercase" class="form-control w-25" name="newTag" placeholder="Add New Tag"> -->
-                                    <button class=' btn btn-info text-white mb-3 mt-3 mx-2' type='button' @click="addTag()"> + </button>
+                                    <button class=' btn btn-info text-white mb-3 mt-3 mx-2 rounded-0' type='button' @click="addTag()"> + </button>
                                     
                                     <template x-for='(newTag,index) in newTags':key='index'>
                                         <div class="d-flex items-center" >

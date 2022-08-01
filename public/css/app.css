@@ -10340,8 +10340,7 @@ textarea.form-control-lg {
   margin: 0;
 }
 .create-page-comp .tags-container {
-  display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
 }
 .create-page-comp .tags-container .btn {
   border-radius: 0;
@@ -10368,6 +10367,67 @@ textarea.form-control-lg {
   border-radius: 0;
 }
 .create-page-comp .txt-button-container .btn-bdr-adj {
+  border-left: 0;
+  border-radius: 0;
+  border-color: #ced4da;
+}
+
+.edit-page-comp .page-header {
+  background: #0047AB;
+  padding: 15px;
+  margin: 0;
+}
+.edit-page-comp .post-title {
+  padding-left: 15%;
+  padding-right: 15%;
+}
+.edit-page-comp .post-body {
+  padding-left: 15%;
+  padding-right: 15%;
+}
+.edit-page-comp .header-txt {
+  color: white;
+  margin-bottom: 0;
+  font-size: 3.5rem;
+}
+.edit-page-comp .page-subtitle-cont {
+  background: #0047AB;
+  padding-left: 25px;
+  padding-right: 15px;
+  padding-bottom: 15px;
+}
+.edit-page-comp .page-subtitle-cont .subtitle-txt {
+  color: white;
+  margin: 0;
+}
+.edit-page-comp .tags-container {
+  justify-content: space-between;
+}
+.edit-page-comp .tags-container .btn {
+  border-radius: 0;
+}
+.edit-page-comp .tags-container .check-hide {
+  display: none;
+}
+.edit-page-comp .tags-container .hide {
+  display: none;
+}
+.edit-page-comp .post-txt-cont {
+  background: #0047AB;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+.edit-page-comp .post-txt-cont .title-txt {
+  color: white;
+}
+.edit-page-comp .post-txt-cont .body-txt {
+  color: white;
+}
+.edit-page-comp .txt-button-container .bdr-adj {
+  border-right: 0;
+  border-radius: 0;
+}
+.edit-page-comp .txt-button-container .btn-bdr-adj {
   border-left: 0;
   border-radius: 0;
   border-color: #ced4da;
